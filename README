@@ -1,0 +1,11 @@
+This is an Arduion based NES controller for Android phones.  It uses Amarino with a Bluesmirf for communication.
+
+Video at http://www.youtube.com/watch?v=_FZTz2KO9vU .
+
+I bought an NES contoller and breakout board at DEFCON, and thought I should do something, so this is what I came up with
+
+This is alpha quality, but it works (at least for me).  There do seem to be some issues with my phone slowing down while I'm using it, not sure if that's because of debug code or memory leak or something else.
+
+I'm using a Sparkfun prototype shield which has a Bluesmirf socket.  I've wired up based on this page http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1254964306/0#0 .  Another strange thing is the Arduino code works with the controller I picked up at Defcon, but won't work with the original NES controllers I have lying around.
+
+I had to install Amarino http://www.amarino-toolkit.net/ on my phone.  That page also has helpful information on paring your Android and Bluesmirf.  You may notice in the video of the project I get a bluetooth error.  This is because there's code in the Keyboard project here that tries to connect to the Bluesmirf.  I've had trouble with that so I just do it using the Amarino app before I launch the keyboard.  This seems to work pretty reliably.
